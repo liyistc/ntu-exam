@@ -1,8 +1,7 @@
-# NTU CCDS Exam Paper Template
+# NTU Exam Paper Template
 
 This project provides a LaTeX template for typesetting exam papers,
-which conform with the formatting guideline of the College of
-Computing and Data Science (CCDS) at the Nanyang Technological
+which conform with the formatting guideline of the Nanyang Technological
 University (NTU). It relies on a document class created by Philip
 S. Hirschhorn, for which he holds the copyright.
 
@@ -17,9 +16,11 @@ S. Hirschhorn, for which he holds the copyright.
 ### Known Issues 
 * When there is only one figure in a question, it
 will be numbered as `Figure QXa` instead of `Figure QX`. This can be
-fixed with `\renewcommand{\thefigure}{QX}`.  * The note at the footer
+fixed with `\renewcommand{\thefigure}{QX}`.
+* The note at the footer
 may not be inserted when a figure is the only part that is placed on
 the next page. Please avoid this as it is not recommended anyways.
+
 
 Please submit an issue if you find any bug or create a pull request if
 you'd like to contribute to the project.
