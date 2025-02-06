@@ -127,7 +127,7 @@
       \end{solution}
     \end{subparts}
 
-\part[15] \Cref{fig:dummy} \lipsum[1][4]
+\part[15] \Cref{fig:dummy} \lipsum[1][4-5]
 
 % Override the figure number to Q3 (instead of Q3a)
 \renewcommand{\thefigure}{Q3}
@@ -137,11 +137,15 @@
   \caption{}\label{fig:dummy}
 \end{figure}
 
+% Having a figure as the only thing placed on the next page should be avoided.
+% \droppoints is placed after the figure as a workaround to ensure that the reminder still appears
+% in the footer.
+\droppoints
+
 \begin{solution}
   \lipsum[2][3-5]
 \end{solution}
 
-\droppoints
 % This marks the end of a question in case the footnote warning does not work correctly
 \addquestionobject
 
