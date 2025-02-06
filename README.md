@@ -7,7 +7,7 @@ S. Hirschhorn, for which he holds the copyright.
 
 
 ### Key Features
-* Typesetting the title, exam instructions, headers, and footers according the NTU standard (printing the number of pages and questions automatically)
+* Typesetting the title, exam instructions, headers, and footers according to the NTU standard (printing the number of pages and questions automatically)
 * Formatting questions, parts, and sub-parts according to the specifications
 * Formatting figures, tables, and their numbers according to the specifications
 * Easy referencing to figures/tables/parts with the `\cref` command
