@@ -24,7 +24,7 @@
 %%% yi_li@ntu.edu.sg
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ccdsexam}[2025/02/06 NTU CCDS exam LaTeX class]
+\ProvidesClass{ntuexam}[2025/02/06 NTU exam LaTeX class]
 
 \LoadClass[12pt,addpoints]{exam}
 
