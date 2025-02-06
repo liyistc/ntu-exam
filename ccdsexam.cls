@@ -24,16 +24,33 @@
 %%% yi_li@ntu.edu.sg
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ccdsexam}[2022/02/14 NTU CCDS exam LaTeX class]
+\ProvidesClass{ccdsexam}[2025/02/06 NTU CCDS exam LaTeX class]
 
 \LoadClass[12pt,addpoints]{exam}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{times}
-\usepackage{microtype}
-\usepackage{etoolbox}
-\usepackage{geometry}
+\newif\if@loadminted
+\DeclareOption{code}{\@loadmintedtrue}
+\ProcessOptions\relax
+
+\if@loadminted
+  \RequirePackage{minted}
+  \RequirePackage{courier}
+  \renewcommand{\theFancyVerbLine}{\small\arabic{FancyVerbLine}}
+  \usemintedstyle{bw}
+  \setminted{xleftmargin=20pt,
+    numbersep=5pt,
+    linenos,
+    fontsize=\small,
+    frame=single,
+    framesep=10pt}
+\fi
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{times}
+\RequirePackage{microtype}
+\RequirePackage{etoolbox}
+\RequirePackage{geometry}
 \geometry{
   a4paper,
   left=3cm,
@@ -41,16 +58,16 @@
   headsep=1cm,
 % showframe
 }
-\usepackage{setspace}
-\usepackage{calc}
-\usepackage{url}
+\RequirePackage{setspace}
+\RequirePackage{calc}
+\RequirePackage{url}
 \renewcommand{\UrlFont}{\sffamily}
 
-\usepackage{enumitem}
-\usepackage{multicol}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage[capitalise]{cleveref}
+\RequirePackage{enumitem}
+\RequirePackage{multicol}
+\RequirePackage{graphicx}
+\RequirePackage{amsmath}
+\RequirePackage[capitalise]{cleveref}
 \crefname{figure}{Figure}{Figures}
 \crefname{subpart}{Subpart}{Subparts}
 \crefname{subsubpart}{subsub part}{sub sub parts}
@@ -58,21 +75,10 @@
 \crefname{question}{Question}{Questions}
 \creflabelformat{partno}{#2\textup{(#1)}#3}
 
-\usepackage{minted}
-\usepackage{courier}
-\renewcommand{\theFancyVerbLine}{\small\arabic{FancyVerbLine}}
-\usemintedstyle{bw}
-\setminted{xleftmargin=20pt,
-  numbersep=5pt,
-  linenos,
-  fontsize=\small,
-  frame=single,
-  framesep=10pt}
-
 % Packages used for special things
-\usepackage{framed,booktabs}
-\usepackage{lastpage}
-\usepackage{calc}
+\RequirePackage{framed,booktabs}
+\RequirePackage{lastpage}
+\RequirePackage{calc}
 
 \newcommand*{\course}[2]{\gdef\@code{#1}\gdef\@course{#2}}
 \newcommand*{\quiztitle}[1]{\gdef\@quiztitle{#1}}
@@ -141,11 +147,11 @@
 \renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
 
 % Format figure captions
-\usepackage{chngcntr}
+\RequirePackage{chngcntr}
 \counterwithin{figure}{question}
 \renewcommand\thefigure{Q\thequestion\alph{figure}}
 \renewcommand{\thetable}{Q\thequestion\alph{figure}}
-\usepackage{caption}
+\RequirePackage{caption}
 \DeclareCaptionFormat{ntucaption}{\bfseries\underline{\smash{#1#2#3}}}
 \captionsetup{format=ntucaption}
 

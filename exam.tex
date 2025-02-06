@@ -1,4 +1,5 @@
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+% Load the class with the 'code' option to typeset code snippets
+% Then you must have minted installed and compile with the -shell-escape option
 \documentclass[]{ccdsexam}
 
 \usepackage{lipsum}
@@ -76,14 +77,19 @@
 \droppoints
 
 \begin{figure}[ht]
-  \begin{minted}[breaklines]{c}
-    void dummy(int a)
-    {
-      int x = 1, y = 0;
-      assert(x - a != 0);
-    }
-  \end{minted}
-  \caption{A dummy code snippet.}\label{fig:test}
+%%%%%%% A sample code snippet
+%
+%  \begin{minted}[breaklines]{c}
+%    void dummy(int a)
+%    {
+%      int x = 1, y = 0;
+%      assert(x - a != 0);
+%    }
+%  \end{minted}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \centering
+  \includegraphics[width=.5\textwidth]{dummy}
+  \caption{A dummy figure.}\label{fig:test}
 \end{figure}
 
 \begin{figure}[ht]
