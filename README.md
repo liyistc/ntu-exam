@@ -14,7 +14,8 @@ S. Hirschhorn, for which he holds the copyright.
 * Typesetting code snippets with nice fonts and syntax highlighting (load the class with the `code` option)
 * Automatically inserting a note in the footer if a question continues on the next page
 
-### Known Issues * When there is only one figure in a question, it
+### Known Issues 
+* When there is only one figure in a question, it
 will be numbered as `Figure QXa` instead of `Figure QX`. This can be
 fixed with `\renewcommand{\thefigure}{QX}`.  * The note at the footer
 may not be inserted when a figure is the only part that is placed on
