@@ -29,7 +29,10 @@
 \LoadClass[12pt,addpoints]{exam}
 
 \newif\if@loadminted
+\newif\if@quizmode
+
 \DeclareOption{code}{\@loadmintedtrue}
+\DeclareOption{quizmode}{\@quizmodetrue}
 \ProcessOptions\relax
 
 \if@loadminted
@@ -175,15 +178,17 @@
   \hrule height 1pt
   \vskip \baselineskip
 
-%  \vskip .5in
-%  \noindent Name: \hrulefill{}\hrulefill{}\hrulefill{}\quad{}Matriculation Number:
-%  \hrulefill\hrulefill{}
-%  \\[.75\baselineskip]
-%
-%  \vfill
-%  \begin{center}
-%    %\settabletotalpoints{60}
-%    \gradetable[h][questions]
-%  \end{center}
-%  \vfill\newpage
+  \if@quizmode
+    \vskip .5in
+    \noindent Name: \hrulefill{}\hrulefill{}\hrulefill{}\quad{}Matriculation Number:
+    \hrulefill\hrulefill{}
+    \\[.75\baselineskip]
+  
+    \vfill
+    \begin{center}
+      %\settabletotalpoints{60}
+      \gradetable[h][questions]
+    \end{center}
+    \vfill\newpage
+  \fi
 }}
